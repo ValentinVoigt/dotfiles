@@ -91,7 +91,6 @@ require("packer").startup(function(use)
     use("hashivim/vim-terraform")
     use("leafgarland/typescript-vim")
     use("nelsyeung/twig.vim")
-    use("ValentinVoigt/nvim-phpcsf")
     use("jose-elias-alvarez/null-ls.nvim")
     use('simrat39/rust-tools.nvim')
 
@@ -311,7 +310,7 @@ pcall(require("telescope").load_extension, "emoji")
 require("nvim-treesitter.configs").setup({
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript",
-        "vim", "php", "regex", "bash", "markdown", "markdown_inline"},
+        "vim", "regex", "bash", "markdown", "markdown_inline"},
 
     highlight = { enable = true },
     indent = { enable = true },
@@ -373,7 +372,7 @@ end
 require("mason").setup()
 
 -- Enable the following language servers
-local servers = { "pyright", "tsserver", "lua_ls", "phpactor" }
+local servers = { "pyright", "tsserver", "lua_ls" }
 
 -- Ensure the servers above are installed
 require("mason-lspconfig").setup({
@@ -423,15 +422,6 @@ require("lspconfig").lua_ls.setup({
     },
 })
 
-require'lspconfig'.phpactor.setup{
-    on_attach = on_attach,
-    capabilities = capabilities,
-    init_options = {
-        ["language_server_phpstan.enabled"] = false,
-        ["language_server_psalm.enabled"] = false,
-    }
-}
-
 -- nvim-cmp setup
 local cmp = require("cmp")
 local luasnip = require("luasnip")
@@ -476,14 +466,6 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = 'calc'},
     },
-})
-
--- phpcs
-vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
-    pattern = "*.php",
-    callback = function()
-        require'phpcs'.cs()
-    end,
 })
 
 -- lsp_signature
