@@ -115,6 +115,6 @@ fi
 
 if command -v velero &> /dev/null; then
 	source <(velero completion zsh)
-done
+fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
