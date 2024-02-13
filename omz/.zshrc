@@ -113,8 +113,7 @@ if [ -d /Users/valentin ]; then
 	source /Users/valentin/.docker/init-zsh.sh || true # Added by Docker Desktop
 fi
 
-if command -v velero &> /dev/null; then
-	source <(velero completion zsh)
-fi
+command -v velero >/dev/null && . <(velero completion zsh)
+command -v flux >/dev/null && . <(flux completion zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
