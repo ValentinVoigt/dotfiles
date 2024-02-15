@@ -111,9 +111,12 @@ if [ -d /Users/valentin ]; then
 	export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
 	export PATH="/Users/valentin/go/bin:$PATH"
 	source /Users/valentin/.docker/init-zsh.sh || true # Added by Docker Desktop
+	complete -o nospace -C /opt/homebrew/bin/terraform terraform
+	alias tf='terraform'
 fi
 
 command -v velero >/dev/null && . <(velero completion zsh)
 command -v flux >/dev/null && . <(flux completion zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
