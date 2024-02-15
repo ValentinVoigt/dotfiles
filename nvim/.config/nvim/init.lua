@@ -76,6 +76,7 @@ require("packer").startup(function(use)
     use("luukvbaal/stabilize.nvim") -- Prevent scrolling when splitting -- Prevent scrolling when splitting
     use("lewis6991/hover.nvim") -- Show signatures on hover
     use("chentoast/marks.nvim") -- Show marks in signcolumn
+    use("dhruvasagar/vim-table-mode") -- For ASCII tables
 
     -- Telescope
     use({ "nvim-telescope/telescope.nvim", branch = "0.1.x", requires = { "nvim-lua/plenary.nvim" } })
