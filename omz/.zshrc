@@ -117,9 +117,9 @@ fi
 
 command -v velero >/dev/null && . <(velero completion zsh)
 command -v flux >/dev/null && . <(flux completion zsh)
+command -v eza >/dev/null && alias exa="eza"
 command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
 command -v exa >/dev/null && alias la="exa --git -la"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
