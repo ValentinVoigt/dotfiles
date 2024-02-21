@@ -117,6 +117,7 @@ fi
 
 command -v velero >/dev/null && . <(velero completion zsh)
 command -v flux >/dev/null && . <(flux completion zsh)
+command -v helm >/dev/null && . <(helm completion zsh)
 command -v eza >/dev/null && alias exa="eza"
 command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
