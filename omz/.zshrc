@@ -111,7 +111,9 @@ if [ -d /Users/valentin ]; then
 	export PATH="/opt/homebrew/bin:$PATH"
 	export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
 	export PATH="/Users/valentin/go/bin:$PATH"
-	source /Users/valentin/.docker/init-zsh.sh || true # Added by Docker Desktop
+	if [ -f /Users/valentin/.docker/init-zsh.sh ]; then
+		source /Users/valentin/.docker/init-zsh.sh || true # Added by Docker Desktop
+	fi
 	complete -o nospace -C /opt/homebrew/bin/terraform terraform
 	alias tf='terraform'
 fi
