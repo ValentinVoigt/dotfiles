@@ -108,6 +108,7 @@ alias ccat='pygmentize -g'
 alias todo='vim ~/todo'
 
 if [ -d /Users/valentin ]; then
+	export PATH="/opt/homebrew/bin:$PATH"
 	export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
 	export PATH="/Users/valentin/go/bin:$PATH"
 	source /Users/valentin/.docker/init-zsh.sh || true # Added by Docker Desktop
