@@ -134,7 +134,6 @@ vim.o.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.number = true
-vim.o.pastetoggle = "<F5>"
 vim.o.secure = true
 vim.o.shiftwidth = 4
 vim.o.showcmd = true
