@@ -107,6 +107,8 @@ alias vim=nvim
 alias ccat='pygmentize -g'
 alias todo='vim ~/todo'
 
+test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
+
 if [ -d /Users/valentin ]; then
 	export PATH="/opt/homebrew/bin:$PATH"
 	export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
