@@ -127,4 +127,9 @@ command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
 command -v exa >/dev/null && alias la="exa --git -la"
 
+if command -v jira >/dev/null; then
+	source /Users/valentin/.jirarc
+	source <(velero completion zsh)
+fi
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
