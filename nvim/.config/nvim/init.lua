@@ -29,6 +29,7 @@ require("packer").startup(function(use)
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-nvim-lsp-signature-help",
             "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-emoji",
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
         },
@@ -465,7 +466,8 @@ cmp.setup({
         { name = 'nvim_lsp_signature_help'},
         { name = 'buffer', keyword_length = 2 },
         { name = "nvim_lsp" },
-        { name = 'calc'},
+        { name = "calc"},
+        { name = "emoji"},
     },
 })
 
