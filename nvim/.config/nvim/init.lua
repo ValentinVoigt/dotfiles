@@ -72,7 +72,6 @@ require("packer").startup(function(use)
     use("airblade/vim-rooter") -- Set cwd to project root
     use("ray-x/lsp_signature.nvim") -- Show signatures while typing
     use("nvim-telescope/telescope-ui-select.nvim") -- Use telescope as selector
-    use("rcarriga/nvim-notify") -- Messages as popups
     use("folke/todo-comments.nvim") -- Highlight TODO and others
     use("luukvbaal/stabilize.nvim") -- Prevent scrolling when splitting -- Prevent scrolling when splitting
     use("lewis6991/hover.nvim") -- Show signatures on hover
@@ -496,9 +495,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
     vim.diagnostic.open_float(nil, opts)
   end
 })
-
--- enable popups globally
-vim.notify = require("notify")
 
 -- highlight TODO, BUG and other annotations in comments
 require("todo-comments").setup { }
