@@ -373,7 +373,7 @@ end
 require("mason").setup()
 
 -- Enable the following language servers
-local servers = { "pyright", "tsserver", "lua_ls", "helm_ls" },
+local servers = { "pyright", "ts_ls", "lua_ls", "helm_ls" },
 
 -- Ensure the servers above are installed
 require("mason-lspconfig").setup({
