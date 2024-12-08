@@ -108,6 +108,7 @@ alias ccat='pygmentize -g'
 alias todo='vim ~/todo'
 
 test -d $HOME/.cargo/bin && export PATH="$PATH:$HOME/.cargo/bin"
+test -d $HOME/src/dotfiles/scripts && export PATH="$PATH:$HOME/src/dotfiles/scripts"
 
 if [ -d /Users/valentin ]; then
 	export PATH="/opt/homebrew/bin:$PATH"
