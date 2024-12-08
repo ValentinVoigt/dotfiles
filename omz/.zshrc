@@ -126,6 +126,7 @@ command -v eza >/dev/null && alias exa="eza"
 command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
 command -v exa >/dev/null && alias la="exa --git -la"
+command -v direnv >/dev/null && . <(direnv hook zsh)
 
 if command -v jira >/dev/null; then
 	source /Users/valentin/.jirarc
