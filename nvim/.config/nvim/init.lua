@@ -95,6 +95,7 @@ require("packer").startup(function(use)
     use("jose-elias-alvarez/null-ls.nvim")
     use("simrat39/rust-tools.nvim")
     use("towolf/vim-helm")
+    use("glench/vim-jinja2-syntax")
 
     if is_bootstrap then
         require("packer").sync()
