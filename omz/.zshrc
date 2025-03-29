@@ -129,6 +129,13 @@ command -v exa >/dev/null && alias l="exa --git -l"
 command -v exa >/dev/null && alias la="exa --git -la"
 command -v direnv >/dev/null && . <(direnv hook zsh)
 
+test -e /opt/homebrew/bin/virtualenvwrapper.sh && source /opt/homebrew/bin/virtualenvwrapper.sh
+
+if command -v devenv >/dev/null ; then
+	eval "$(_DEVENV_COMPLETE=zsh_source devenv)"
+	export WORKON_HOME=/Users/valentin/.virtualenvwrapper
+fi
+
 if command -v jira >/dev/null; then
 	source /Users/valentin/.jirarc
 fi
