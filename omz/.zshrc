@@ -115,10 +115,11 @@ if [ -d /Users/valentin ]; then
 	export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
 	export PATH="/Users/valentin/go/bin:$PATH"
 	export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-	source /Users/valentin/.docker/init-zsh.sh || true
 	complete -o nospace -C /opt/homebrew/bin/terraform terraform
 	alias tf='terraform'
 fi
+
+test -e /Users/valentin/.docker/init-zsh.sh && (source /Users/valentin/.docker/init-zsh.sh || true)
 
 command -v velero >/dev/null && . <(velero completion zsh)
 command -v flux >/dev/null && . <(flux completion zsh)
