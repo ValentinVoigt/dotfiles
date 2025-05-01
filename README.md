@@ -4,6 +4,10 @@ Debian dependencies:
 
     apt install build-essential curl direnv fzf git htop jq neovim net-tools npm python3-pip shfmt stow zsh
 
+macOS dependencies:
+
+    brew install direnv fzf htop jq neovim shfmt stow tree-sitter
+
 oh-my-zsh:
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
