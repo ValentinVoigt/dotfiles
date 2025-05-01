@@ -27,6 +27,7 @@ command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
 command -v exa >/dev/null && alias la="exa --git -la"
 command -v terraform >/dev/null && alias tf="terraform"
+command -v kubectl >/dev/null && alias k="kubectl"
 
 # various inits
 test -e /opt/homebrew/bin/terraform && complete -o nospace -C /opt/homebrew/bin/terraform terraform
