@@ -6,7 +6,7 @@ Debian dependencies:
 
 macOS dependencies:
 
-    brew install direnv fzf htop jq neovim shfmt stow tree-sitter
+    brew install direnv fzf htop jq neovim shfmt stow tree-sitter lua-language-server
 
 oh-my-zsh:
 
