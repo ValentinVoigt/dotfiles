@@ -5,6 +5,7 @@ test -d $HOME/.cargo/bin && export PATH="$HOME/.cargo/bin:$PATH"
 test -d $HOME/src/dotfiles/scripts && export PATH="$HOME/src/dotfiles/scripts:$PATH"
 test -d $HOME/.composer/vendor/bin && export PATH="$HOME/.composer/vendor/bin:$PATH"
 test -d $HOME/go/bin && export PATH="$HOME/go/bin:$PATH"
+test -d $HOME/.docker/bin && export PATH="$HOME/.docker/bin:$PATH"
 
 # oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
@@ -32,7 +33,6 @@ command -v kubectl >/dev/null && alias k="kubectl"
 # various inits
 test -e /opt/homebrew/bin/terraform && complete -o nospace -C /opt/homebrew/bin/terraform terraform
 test -e /opt/homebrew/bin/virtualenvwrapper.sh && source /opt/homebrew/bin/virtualenvwrapper.sh
-test -e $HOME/.docker/init-zsh.sh && (source $HOME/.docker/init-zsh.sh || true)
 test -e $HOME/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh || true
 test -e $HOME/.jirarc && (source $HOME/.jirarc || true)
 
