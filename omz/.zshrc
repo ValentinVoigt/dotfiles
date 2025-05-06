@@ -21,7 +21,7 @@ export WORKON_HOME=$HOME/.virtualenvwrapper
 alias vim=nvim
 alias todo="vim ~/todo"
 
-command -v pygmentize && alias ccat="pygmentize -g"
+command -v pygmentize >/dev/null && alias ccat="pygmentize -g"
 command -v eza >/dev/null && alias exa="eza"
 command -v exa >/dev/null && alias ls="exa"
 command -v exa >/dev/null && alias l="exa --git -l"
