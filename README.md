@@ -14,8 +14,8 @@ oh-my-zsh:
 
 Install with:
 
-    stow -t ~ omz
-    stow -t ~ nvim
+    rm ~/.zshrc; stow -t ~ omz
+    mkdir -p ~/.config && stow -t ~ nvim
     stow -t ~ tmux
 
 Current neovim on Debian:
@@ -27,4 +27,4 @@ Current neovim on Debian:
     make CMAKE_BUILD_TYPE=RelWithDebInfo
     cd build
     cpack -G DEB
-    sudo dpkg -i --force-overwrite  nvim-linux64.deb
+    sudo dpkg -i --force-overwrite  nvim-*.deb
