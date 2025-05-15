@@ -6,7 +6,7 @@ test -d $HOME/src/dotfiles/scripts && export PATH="$HOME/src/dotfiles/scripts:$P
 test -d $HOME/.composer/vendor/bin && export PATH="$HOME/.composer/vendor/bin:$PATH"
 test -d $HOME/go/bin && export PATH="$HOME/go/bin:$PATH"
 test -d $HOME/.docker/bin && export PATH="$HOME/.docker/bin:$PATH"
-test -d "/Applications/Wine Stable.app/Contents/Resources/wine/bin" && export PATH="$HOME:/Applications/Wine Stable.app/Contents/Resources/wine/bin"
+test -d "/Applications/Wine Stable.app/Contents/Resources/wine/bin" && export PATH="$PATH:/Applications/Wine Stable.app/Contents/Resources/wine/bin"
 
 # oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
