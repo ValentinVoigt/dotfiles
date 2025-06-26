@@ -1,12 +1,14 @@
 # PATH
 test -d /opt/homebrew/bin && export PATH="/opt/homebrew/bin:$PATH"
 test -d /opt/homebrew/opt/mysql-client/bin && export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+test -d /opt/homebrew/Cellar/rsync/3.4.1/bin && export PATH="/opt/homebrew/Cellar/rsync/3.4.1/bin:$PATH"
 test -d $HOME/.cargo/bin && export PATH="$HOME/.cargo/bin:$PATH"
 test -d $HOME/src/dotfiles/scripts && export PATH="$HOME/src/dotfiles/scripts:$PATH"
 test -d $HOME/.composer/vendor/bin && export PATH="$HOME/.composer/vendor/bin:$PATH"
 test -d $HOME/go/bin && export PATH="$HOME/go/bin:$PATH"
 test -d $HOME/.docker/bin && export PATH="$HOME/.docker/bin:$PATH"
 test -d "/Applications/Wine Stable.app/Contents/Resources/wine/bin" && export PATH="$PATH:/Applications/Wine Stable.app/Contents/Resources/wine/bin"
+test -d $HOME/.local/bin && export PATH="$PATH:$HOME/.local/bin"
 
 # oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
